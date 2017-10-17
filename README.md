@@ -1,7 +1,7 @@
 ansible_role_tflint
 =========
 
-Set up [tflint][https://github.com/wata727/tflint] utility.
+Set up [tflint](https://github.com/wata727/tflint) utility.
 
 
 Requirements
@@ -32,6 +32,7 @@ Example Playbook
 
     - hosts: servers
       roles:
+         - mauromedda.ansible_role_unzip
          - { role: ansible_role_tflint, tflint_v: v0.5.1 }
 
 License
