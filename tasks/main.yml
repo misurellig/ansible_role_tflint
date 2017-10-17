@@ -1,0 +1,25 @@
+---
+# tasks file for ansible_role_tflint
+- name: Create tflint bin dir
+  file:
+    path: "{{ tflint_bin_dir }}"
+    state: directory
+    mode: 0755
+    recurse: yes
+
+- name: Dowload and inflate tflint zip file
+  unarchive:
+    src: "{{ tflint_release_repo }}/{{ tflint_v }}/{{ tflint_zip_file }}"
+    dest: "{{ tflint_bin_dir }}"
+    remote_src: yes
+
+- name: Copy profile.d file
+  copy:
+    content: |
+      #!/bin/bash
+
+      PATH=$PATH:"{{ tflint_bin_dir }}"
+
+      export PATH
+    dest: /etc/profile.d/tflint.sh
+    mode: 0444

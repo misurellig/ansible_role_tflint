@@ -1,0 +1,8 @@
+---
+# defaults file for ansible_role_tflint
+tflint_bin_dir: /usr/local/tflint/bin
+
+tflint_v: v0.5.0
+tflint_zip_file: tflint_linux_amd64.zip
+
+tflint_release_repo: https://github.com/wata727/tflint/releases/download
