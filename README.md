@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/misurellig/ansible_role_tflint.svg?branch=master)](https://travis-ci.org/misurellig/ansible_role_tflint)
+
 ansible_role_tflint
 =========
 
